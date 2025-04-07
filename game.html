@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monster Survivors - CloudGame</title>
-    <meta name="description" content="Play Monster Survivors online. A thrilling survival game where you fight against waves of monsters in this exciting cloud-based adventure.">
-    <link rel="canonical" href="https://cloudgame.online/game/monster-survivors" />
+    <title>Game Details - CloudGame</title>
+    <meta name="description" content="Play your favorite cloud games online. Enjoy seamless gaming experience without downloads.">
+    <link rel="canonical" href="https://cloudgame.online/game.html" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -20,24 +20,35 @@
             }
         }
     </script>
+       <script async src="https://www.googletagmanager.com/gtag/js?id=G-V81KCBX13N">
+
+       </script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+        gtag('config', 'G-V81KCBX13N');
+  
+      // 修复语法错误，确保所有标签正确关闭
+      </script>
 </head>
 <body class="bg-apple-gray min-h-screen">
     <!-- Header -->
-    <header class="bg-white shadow-sm">
+    <header class="bg-white shadow-sm sticky top-0 z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-4 md:mb-0">
-                    <h1 class="text-3xl font-bold text-apple-dark">CloudGame</h1>
-                    <p class="text-gray-600 mt-2">Your Ultimate Cloud Gaming Destination</p>
+                    <a href="index.html" class="inline-block">
+                        <h1 class="text-3xl font-bold text-apple-dark">CloudGame</h1>
+                        <p class="text-gray-600 mt-2">Empowering Freedom Through Cloud Gaming</p>
+                    </a>
                 </div>
                 <div class="w-full md:w-96">
                     <div class="relative">
-                        <input type="text" 
-                               placeholder="Search games..." 
-                               class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent">
-                        <button class="absolute right-3 top-1/2 transform -translate-y-1/2">
-                            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        <input type="text" id="search-input" placeholder="Search games..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-apple-blue">
+                        <button id="search-button" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-apple-blue">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
                         </button>
                     </div>
@@ -48,64 +59,580 @@
 
     <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <!-- Game Title and Description -->
-        <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
-            <h2 class="text-3xl font-bold text-apple-dark mb-4">Monster Survivors</h2>
-            <p class="text-gray-600 text-lg mb-6">Survive wave after wave of monsters in this thrilling action-packed adventure!</p>
-            
-            <!-- Game Frame -->
-            <div class="aspect-w-16 aspect-h-9 mb-6">
-                <iframe 
-                    src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" 
-                    class="w-full h-full rounded-lg"
-                    allowfullscreen>
-                </iframe>
+        <!-- Game Details Section -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <div id="game-details">
+                <!-- Game details will be dynamically inserted here -->
             </div>
-
+            
+            <!-- Game iframe -->
+            <div class="mt-8 aspect-video w-full rounded-lg overflow-hidden shadow-lg">
+                <iframe id="game-iframe" src="" frameborder="0" class="w-full h-full" allowfullscreen></iframe>
+            </div>
+            
             <!-- Game Description -->
-            <div class="prose max-w-none">
-                <h3 class="text-xl font-semibold mb-4">How to Play</h3>
-                <p class="text-gray-700 mb-4">
-                    Monster Survivors is an exciting survival game where you must defend yourself against endless waves of monsters. 
-                    Use your weapons and special abilities to stay alive as long as possible. Collect power-ups and upgrade your 
-                    character to become stronger and face increasingly challenging waves of enemies.
-                </p>
-                <ul class="list-disc list-inside text-gray-700 space-y-2">
-                    <li>Use WASD or arrow keys to move your character</li>
-                    <li>Click to shoot at monsters</li>
-                    <li>Collect power-ups to enhance your abilities</li>
-                    <li>Survive as long as possible to achieve high scores</li>
-                </ul>
+            <div class="mt-8" id="game-description">
+                <!-- Game description will be dynamically inserted here -->
             </div>
         </div>
-
-        <!-- Recommended Games -->
-        <div class="bg-white rounded-lg shadow-sm p-6">
-            <h2 class="text-2xl font-semibold mb-6 text-apple-dark">Recommended Games</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Recommended Game Card -->
-                <a href="#" class="block bg-apple-gray rounded-lg overflow-hidden hover:shadow-md transition-shadow">
-                    <div class="aspect-w-16 aspect-h-9">
-                        <img src="https://via.placeholder.com/400x225" alt="Recommended game thumbnail" class="object-cover w-full h-full">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-medium text-apple-dark">Game Title</h3>
-                    </div>
-                </a>
-                <!-- Repeat recommended game cards as needed -->
+        
+        <!-- Recommended Games Section -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-semibold text-apple-dark mb-6">Recommended Games</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="recommended-games">
+                <!-- Recommended games will be dynamically inserted here -->
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white mt-12">
+    <footer class="bg-apple-dark text-white mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div class="text-center text-gray-600">
-                <p>&copy; 2024 CloudGame. All rights reserved.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h2 class="text-xl font-semibold mb-4">About CloudGame</h2>
+                    <p class="text-gray-300">CloudGame is your ultimate destination for free online cloud gaming. Play instantly without downloads across all your devices.</p>
+                </div>
+                <div>
+                    <h2 class="text-xl font-semibold mb-4">Quick Links</h2>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Popular Games</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">New Releases</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-xl font-semibold mb-4">Connect With Us</h2>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.054 10.054 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-300">
+                <p>&copy; 2023 CloudGame. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- JavaScript -->
+    <script>
+        // Sample game data (in a real application, this would come from a database or API)
+        const games = 
+        [
+    {
+        "id": "1",
+        "name": "Sprunki Retake Human New",
+        "category": "hotgame",
+        "thumbnail": "https://data.gameflare.com/games/10720/E272I5PHOoz4f5-400-300.jpg",
+        "description": "Each character comes with their own distinct outfit, voice, and movement, adding personality without altering the core gameplay.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-retake-human-new/"
+    },
+    {
+        "id": "2",
+        "name": "Sprunki 1996",
+        "category": "hotgame",
+        "thumbnail": "https://data.gameflare.com/games/10712/26wKCB7hUbO9Cx-400-300.jpg",
+        "description": "Sprunki 1996 delivers a fun, immersive experience that blends nostalgia with interactive music-making.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-1996/"
+    },
+    {
+        "id": "3",
+        "name": "Sprunki Swapped Version",
+        "category": "hotgame",
+        "thumbnail": "https://data.gameflare.com/games/10721/WOFmPYpkY424ic-400-300.jpg",
+        "description": "Dive into the reworked Sprunki Swapped Version for a fresh, captivating adventure!",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-swapped-version/"
+    },
+    {
+        "id": "4",
+        "name": "Sprunki Pyramixed - Finished Animations",
+        "category": "hotgame",
+        "thumbnail": "https://data.gameflare.com/games/10732/GjJt3fOO0xavlk-400-300.jpg",
+        "description": "Featuring full-body animations for each character and tons of new elements to explore.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-pyramixed-finished-animations/"
+    },
+    {
+        "id": "5",
+        "name": "Sprunki Definitive Phase 7",
+        "category": "hotgame",
+        "thumbnail": "https://data.gameflare.com/games/10698/QQsd7FluqzmiTs-400-300.jpg",
+        "description": "As part of the popular Sprunki Definitive series, this version introduces a darker, more haunting twist while keeping the core mechanics intact.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-definitive-phase-7/"
+    },
+    {
+        "id": "6",
+        "name": "Sprunki Definitive Phase 8",
+        "category": "hotgame",
+        "thumbnail": "https://data.gameflare.com/games/10725/KbJc4Y0zi8zw9x-400-300.jpg",
+        "description": "This phase introduces enhanced characters, intricate loops, and refined effects, all designed to evoke powerful emotions of phase 8.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-definitive-phase-8/"
+    },
+    {
+        "id": "7",
+        "name": "Sprunki Pyramixed: Squid Game",
+        "category": "hotgame",
+        "thumbnail": "https://data.gameflare.com/games/10704/4C3r32vUqJ14cR-400-300.jpg",
+        "description": "Featuring red lighting, masked guards, and eerie game-themed visuals, every beat takes you closer to the perilous challenges of the game.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-pyramixed-squid-game/"
+    },
+    {
+        "id": "8",
+        "name": "Sprunki Pyramix Ultimate Port",
+        "category": "hotgame",
+        "thumbnail": "https://data.gameflare.com/games/10752/Ch2v3jVpu09mas-400-300.jpg",
+        "description": "Sprunki Pyramix Ultimate Port brings a unique blend of sound and visual artistry to any performance.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-pyramix-ultimate-port/"
+    },
+    {
+        "id": "9",
+        "name": "Sprunki Rotrizi 5.0",
+        "category": "hotgame",
+        "thumbnail": "https://data.gameflare.com/games/10740/NcOvauNjdIPpfM-400-300.jpg",
+        "description": "Sprunki Rotrizi 5.0 is the ultimate futuristic mod, redefining sound layering with intense glitch effects, deep bass distortions, and electrifying synths",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-rotrizi-5-0/"
+    },
+    {
+        "id": "10",
+        "name": "Sprunki Retake: Phase 3",
+        "category": "hotgame",
+        "thumbnail": "https://data.gameflare.com/games/10746/LXqfwJbTAJ8dIl-400-300.jpg",
+        "description": "Featuring revamped characters, seamless audio loops, and an engaging storyline, it’s designed to captivate both newcomers and long-time fans alike.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-retake-phase-3/"
+    },
+    {
+        "id": "11",
+        "name": "Sprunki DX",
+        "category": "hotgame",
+        "thumbnail": "https://data.gameflare.com/games/10709/mdtoRNpcUsqbHM-400-300.jpg",
+        "description": "Whether you're a music enthusiast or a casual gamer, Sprunki DX offers an innovative way to express your creativity.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-dx/"
+    },
+    {
+        "id": "12",
+        "name": "Sprunki Vaporwave",
+        "category": "hotgame",
+        "thumbnail": "https://data.gameflare.com/games/10716/jUM43np0c3Tzyw-400-300.jpg",
+        "description": "Dive into this immersive experience and express your musical creativity like never before!",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-vaporwave/"
+    },
+    {
+        "id": "13",
+        "name": "Cartoon Strike",
+        "category": "bestgame",
+        "thumbnail": "https://data.gameflare.com/games/7147/ZNGtOIUprp5rWH-400-300.jpg",
+        "description": "Play this first-person multiplayer game in pixel graphics.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/cartoon-strike/"
+    },
+    {
+        "id": "14",
+        "name": "Wolf Family Simulator",
+        "category": "bestgame",
+        "thumbnail": "https://data.gameflare.com/games/10330/npUGSdhrEZgm5i-400-300.jpg",
+        "description": "Start as a basic wolf and progress to unlock breeds like the gray wolf, Indian wolf, jackal, coyote, and white wolf, ensuring your survival.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/wolf-family-simulator/"
+    },
+    {
+        "id": "15",
+        "name": "My Land: King Defender",
+        "category": "bestgame",
+        "thumbnail": "https://data.gameflare.com/games/9945/FKi2m8qxNS1Wa2-400-300.jpg",
+        "description": "Try to save your kingdom from monster attacks. Buy new lands, gather new resources, and sell them to make gold.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/my-land-king-defender/"
+    },
+    {
+        "id": "16",
+        "name": "Mini Colony",
+        "category": "bestgame",
+        "thumbnail": "https://data.gameflare.com/games/9797/JAazjylEIycK1f-400-300.jpg",
+        "description": "Build your own colony, create many different tools and care for your animals.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/mini-colony/"
+    },
+    {
+        "id": "17",
+        "name": "House Builder",
+        "category": "bestgame",
+        "thumbnail": "https://data.gameflare.com/games/9635/KEBxruJxxtARPn-400-300.jpg",
+        "description": "Make a great office out of an empty building in this online game.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/house-builder/"
+    },
+    {
+        "id": "18",
+        "name": "Mini Farm",
+        "category": "bestgame",
+        "thumbnail": "https://data.gameflare.com/games/9654/aFHyAf29qVoL6z-400-300.jpg",
+        "description": "Buy animals, grow crops and explore your little farm.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/mini-farm/"
+    },
+    {
+        "id": "19",
+        "name": "Mini Survival",
+        "category": "bestgame",
+        "thumbnail": "https://data.gameflare.com/games/9535/MVnavWEQc1wnfg-400-300.jpg",
+        "description": "A great game where you'll be trying to survive for as long as possible in a forest with your hero.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/mini-survival/"
+    },
+    {
+        "id": "20",
+        "name": "Business Tycoon",
+        "category": "bestgame",
+        "thumbnail": "https://data.gameflare.com/games/9528/MsPTA5BEcQWBBU-400-300.jpg",
+        "description": "Earn money, buy new stores and build up an empire.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/business-tycoon/"
+    },
+    {
+        "id": "21",
+        "name": "Stunt Destroyer",
+        "category": "bestgame",
+        "thumbnail": "https://data.gameflare.com/games/9499/SzlsbzuKdxE126-400-300.jpg",
+        "description": "Try to destroy as many obstacles as you can with your car and thus get as far as possible.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/stunt-destroyer/"
+    },
+    {
+        "id": "22",
+        "name": "Save the Penguin",
+        "category": "bestgame",
+        "thumbnail": "https://data.gameflare.com/games/9491/ZqiOAhE4q8R9wq-400-300.jpg",
+        "description": "Save your friend who’s been kidnapped by evil penguins.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/save-the-penguin/"
+    },
+    {
+        "id": "23",
+        "name": "Samurai Warrior",
+        "category": "bestgame",
+        "thumbnail": "https://data.gameflare.com/games/9489/rNmazeTGaZkH3g-400-300.jpg",
+        "description": "Run around with your hero and fight against your enemies.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/samurai-warrior/"
+    },
+    {
+        "id": "24",
+        "name": "Prison Break",
+        "category": "bestgame",
+        "thumbnail": "https://data.gameflare.com/games/9476/L2ETMWRHgpcyaN-400-300.jpg",
+        "description": "Action online game, where you'll have to get through a number of obstacles to get out of jail.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/prison-break/"
+    },
+    {
+        "id": "25",
+        "name": "Sprunki Pyramixed",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/10615/2H9HmNa3cib3xw-400-300.jpg",
+        "description": "Simply drag sound characters onto the pyramid and experiment with various layers to create your perfect track.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-pyramixed/"
+    },
+    {
+        "id": "26",
+        "name": "Sprunki Retake Human New",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/10720/E272I5PHOoz4f5-400-300.jpg",
+        "description": "Each character comes with their own distinct outfit, voice, and movement, adding personality without altering the core gameplay.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-retake-human-new/"
+    },
+    {
+        "id": "27",
+        "name": "Sprunki 1996",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/10712/26wKCB7hUbO9Cx-400-300.jpg",
+        "description": "Sprunki 1996 delivers a fun, immersive experience that blends nostalgia with interactive music-making.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-1996/"
+    },
+    {
+        "id": "28",
+        "name": "Sprunki Phase 10",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/10566/XDhv5kEUqOHMzk-400-300.jpg",
+        "description": "It’s a must-play for fans seeking an unforgettable mix of music and horror.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-phase-10/"
+    },
+    {
+        "id": "29",
+        "name": "Sprunki Phase 5",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/10481/wCnNoGB0V55A4q-400-300.jpg",
+        "description": "With its darker, more suspenseful atmosphere, Sprunki Phase 5 (Original) takes the game to new heights.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-phase-5/"
+    },
+    {
+        "id": "30",
+        "name": "Sprunki Pyramixed - Finished Animations",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/10732/GjJt3fOO0xavlk-400-300.jpg",
+        "description": "Featuring full-body animations for each character and tons of new elements to explore.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-pyramixed-finished-animations/"
+    },
+    {
+        "id": "31",
+        "name": "Sprunki Phase 9",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/10561/KlWLmgXKoaMDF5-400-300.jpg",
+        "description": "Sprunki Phase 9 Horror Mod immerses players in a chilling experience with haunting sounds, eerie characters, and unsettling visuals.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-phase-9/"
+    },
+    {
+        "id": "32",
+        "name": "Sprunki Phase 3",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/10469/dYD9GDH7QKNlsp-400-300.jpg",
+        "description": "Sprunki Phase 3 is a fan-made extension of the popular online music game, Sprunki.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-phase-3/"
+    },
+    {
+        "id": "33",
+        "name": "Sprunki Swapped Version",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/10721/WOFmPYpkY424ic-400-300.jpg",
+        "description": "Dive into the reworked Sprunki Swapped Version for a fresh, captivating adventure!",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-swapped-version/"
+    },
+    {
+        "id": "34",
+        "name": "Sprunki Phase 4",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/10475/9mca1ES3jtxj2f-400-300.jpg",
+        "description": "Dive into this thrilling adventure and explore the limitless possibilities of sound as you create your very own eerie soundtracks.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-phase-4/"
+    },
+    {
+        "id": "35",
+        "name": "Sprunki Mustard",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/10489/npqhPSjLLnYfs1-400-300.jpg",
+        "description": "Choose a character to start the beat, then begin adding elements to build your soundscape.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-mustard/"
+    },
+    {
+        "id": "36",
+        "name": "Sprunki Phase 7",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/10544/vgQnTxfqG5rtOW-400-300.jpg",
+        "description": "Discover the suspense, embrace the melody, and master the art of sound with Sprunki Phase 7.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-phase-7/"
+    },
+    {
+        "id": "37",
+        "name": "Sprunki Phase 6",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/10499/wWi0Hvrsb25L8f-400-300.jpg",
+        "description": "Phase 6 pushes boundaries, inviting players to craft unique soundscapes with unparalleled depth and creativity.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-phase-6/"
+    },
+    {
+        "id": "38",
+        "name": "Sprunki Retake",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/10488/3ZE6kigX2YjVe7-400-300.jpg",
+        "description": "This unique mod preserves the beloved music-mixing mechanics while offering a fresh, haunting visual experience.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-retake/"
+    },
+    {
+        "id": "39",
+        "name": "Monopoly Online",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/7027/6BmAnPQOB5JJaV-400-300.jpg",
+        "description": "Play monopoly online. This game is also available as board game but this time you can play online.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/monopoly-online/"
+    },
+    {
+        "id": "40",
+        "name": "Sprunki Definitive Phase 6",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/10694/5txdkV0KwZtk0F-400-300.jpg",
+        "description": "Dive into a world where music meets mystery and let your imagination run wild in a horror theme!",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-definitive-phase-6/"
+    },
+    {
+        "id": "41",
+        "name": "Sprunki Definitive Phase 8",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/10725/KbJc4Y0zi8zw9x-400-300.jpg",
+        "description": "This phase introduces enhanced characters, intricate loops, and refined effects, all designed to evoke powerful emotions of phase 8.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-definitive-phase-8/"
+    },
+    {
+        "id": "42",
+        "name": "Sprunki Phase 8",
+        "category": "populargame",
+        "thumbnail": "https://data.gameflare.com/games/10552/SxrhDDIpIDNqPh-400-300.jpg",
+        "description": "New mod with fresh horror-themed characters, each bringing their own distinct sounds and visual styles.",
+        "fullDescription": "",
+        "iframeUrl": "https://www.gameflare.com/embed/sprunki-phase-8/"
+    }
+];
+
+
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            const results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Function to render game details
+        function renderGameDetails(gameId) {
+           // alert(gmeid);
+            const game = games.find(g => g.id === gameId);
+          //alert(game);
+            if (!game) {
+                window.location.href = 'index.html';
+                return;
+            }
+            
+            // Update page title
+            document.title = `${game.name} - CloudGame`;
+            
+            // Update canonical URL
+            const canonicalLink = document.querySelector('link[rel="canonical"]');
+            canonicalLink.setAttribute('href', `https://cloudgame.online/game.html?id=${gameId}`);
+            
+            // Render game details
+            const gameDetailsElement = document.getElementById('game-details');
+            gameDetailsElement.innerHTML = `
+                <h2 class="text-3xl font-bold text-apple-dark">${game.name}</h2>
+                <p class="text-lg text-gray-600 mt-2">${game.description}</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="px-3 py-1 bg-apple-blue text-white text-sm rounded-full">${game.category.charAt(0).toUpperCase() + game.category.slice(1)}</span>
+                </div>
+            `;
+            
+            // Set iframe source
+            const gameIframe = document.getElementById('game-iframe');
+            gameIframe.src = game.iframeUrl;
+            
+            // Render game description
+            const gameDescriptionElement = document.getElementById('game-description');
+            gameDescriptionElement.innerHTML = `
+                <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                ${game.fullDescription}
+            `;
+            
+            // Render recommended games (excluding current game)
+            renderRecommendedGames(game.id, game.category);
+        }
+
+        // Function to render recommended games
+        function renderRecommendedGames(currentGameId, category) {
+            // Get games from the same category, excluding the current game
+            let recommendedGames = games.filter(game => game.category === category && game.id !== currentGameId);
+            
+            // If we don't have enough games from the same category, add some random games
+            if (recommendedGames.length < 4) {
+                const otherGames = games.filter(game => game.id !== currentGameId && game.category !== category);
+                const randomOtherGames = otherGames.sort(() => 0.5 - Math.random()).slice(0, 4 - recommendedGames.length);
+                recommendedGames = [...recommendedGames, ...randomOtherGames];
+            }
+            
+            // Limit to 4 games
+            recommendedGames = recommendedGames.slice(0, 4);
+            
+            const recommendedGamesElement = document.getElementById('recommended-games');
+            recommendedGamesElement.innerHTML = '';
+            
+            recommendedGames.forEach(game => {
+                const gameCard = document.createElement('div');
+                gameCard.className = 'bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition';
+                gameCard.innerHTML = `
+                    <a href="game.html?id=${game.id}" class="block">
+                        <img src="${game.thumbnail}" alt="${game.name}" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-apple-dark mb-2">${game.name}</h3>
+                            <p class="text-gray-600 text-sm">${game.description}</p>
+                        </div>
+                    </a>
+                `;
+                recommendedGamesElement.appendChild(gameCard);
+            });
+        }
+
+        // Function to handle search
+        function handleSearch() {
+            const searchInput = document.getElementById('search-input');
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                return;
+            }
+            
+            window.location.href = `index.html?search=${encodeURIComponent(searchTerm)}`;
+        }
+
+        // Add event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            const gameId = getUrlParameter('id');
+            //alert(gameId);
+            if (gameId) {
+                renderGameDetails(gameId);
+            } else {
+                window.location.href = 'index.html';
+            }
+            
+            // Add event listener to search button
+            const searchButton = document.getElementById('search-button');
+            searchButton.addEventListener('click', handleSearch);
+            
+            // Add event listener for Enter key in search input
+            const searchInput = document.getElementById('search-input');
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    handleSearch();
+                }
+            });
+        });
+    </script>
 </body>
-</html> 
+</html>
