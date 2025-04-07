@@ -3,83 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monster Survivors - Epic Cloud Gaming Adventure | Cloud Game Online</title>
-    <meta name="description" content="Experience the thrilling Monster Survivors game online. Fight endless waves of monsters in this action-packed cloud gaming adventure. Play now on any device!">
-    <link rel="canonical" href="https://cloudgame.online/monster-survivors" />
+    <title>CloudGame - Play Your Favorite Games Anywhere</title>
+    <meta name="description" content="Play your favorite games instantly in the cloud. No downloads required. Access hundreds of games across multiple genres.">
+    <link rel="canonical" href="https://cloudgame.online" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V81KCBX13N"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-V81KCBX13N');
-</script>
-    <style>
-        :root {
-            --apple-blue: #007AFF;
-            --apple-gray: #8E8E93;
-            --apple-background: #F5F5F7;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'apple-gray': '#F5F5F7',
+                        'apple-blue': '#0071E3',
+                        'apple-dark': '#1D1D1F'
+                    }
+                }
+            }
         }
-    </style>
+    </script>
 </head>
-<body class="bg-[#F5F5F7] text-gray-800">
-    <header class="py-6 px-4 md:px-8 lg:px-16 bg-white shadow-sm">
-        <nav class="max-w-7xl mx-auto">
-            <h1 class="text-3xl md:text-4xl font-bold text-[#007AFF]">Monster Survivors Cloud Game</h1>
-        </nav>
+<body class="bg-apple-gray min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <h1 class="text-3xl font-bold text-apple-dark">CloudGame</h1>
+                    <p class="text-gray-600 mt-2">Your Ultimate Cloud Gaming Destination</p>
+                </div>
+                <div class="w-full md:w-96">
+                    <div class="relative">
+                        <input type="text" 
+                               placeholder="Search games..." 
+                               class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent">
+                        <button class="absolute right-3 top-1/2 transform -translate-y-1/2">
+                            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-8">
-        <section class="mb-12">
-            <p class="text-xl md:text-2xl text-[#8E8E93] mb-8">Embark on an epic survival journey where you face endless waves of monsters in this thrilling cloud-based adventure.</p>
-            
-            <div class="w-full aspect-[16/9] bg-black rounded-lg overflow-hidden shadow-xl mb-8">
-                <iframe 
-                    src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"
-                    class="w-full h-full border-0"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </section>
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Categories Sidebar -->
+            <aside class="w-full md:w-64 bg-white rounded-lg shadow-sm p-4">
+                <h2 class="text-xl font-semibold mb-4 text-apple-dark">Categories</h2>
+                <nav class="space-y-2">
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Action</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Adventure</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Arcade</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Car</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Clicker</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Crazy</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Drift</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Driving</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Girl</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Kids</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Minecraft</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Multiplayer</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Pixel</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Puzzle</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Racing</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Shooting</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Simulator</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Sniper</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Sports</a>
+                    <a href="#" class="block px-4 py-2 rounded-lg hover:bg-apple-gray text-gray-700 hover:text-apple-blue transition-colors">Strategy</a>
+                </nav>
+            </aside>
 
-        <section class="grid md:grid-cols-2 gap-8 mb-12">
-            <div>
-                <h2 class="text-2xl font-bold mb-4 text-[#007AFF]">Game Features</h2>
-                <ul class="space-y-3 text-gray-700">
-                    <li>• Real-time monster combat system</li>
-                    <li>• Multiple character abilities and upgrades</li>
-                    <li>• Endless gameplay progression</li>
-                    <li>• Cloud-based gaming - no downloads required</li>
-                    <li>• Cross-platform compatibility</li>
-                </ul>
+            <!-- Games Grid -->
+            <div class="flex-1">
+                <h2 class="text-2xl font-semibold mb-6 text-apple-dark">Popular Games</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Game Card Template -->
+                    <a href="game.html" class="block bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="https://via.placeholder.com/400x225" alt="Game thumbnail" class="object-cover w-full h-full">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-medium text-apple-dark">Game Title</h3>
+                        </div>
+                    </a>
+                    <!-- Repeat game cards as needed -->
+                </div>
             </div>
-            <div>
-                <h2 class="text-2xl font-bold mb-4 text-[#007AFF]">How to Play</h2>
-                <ul class="space-y-3 text-gray-700">
-                    <li>• Use WASD or arrow keys to move</li>
-                    <li>• Auto-attack nearest enemies</li>
-                    <li>• Collect experience orbs to level up</li>
-                    <li>• Choose power-ups wisely</li>
-                    <li>• Survive as long as possible</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-4 text-[#007AFF]">Game Description</h2>
-            <div class="prose max-w-none text-gray-700">
-                <p class="mb-4">Monster Survivors is an intense survival action game where your skills and strategy determine how long you can last against increasingly difficult waves of monsters. As you progress, you'll unlock new abilities, discover powerful combinations, and face ever-greater challenges.</p>
-                <p>The game features smooth cloud-based gameplay, ensuring you can jump right into the action without any downloads or installations. Whether you're playing on desktop or mobile, the responsive controls and optimized performance deliver an seamless gaming experience.</p>
-            </div>
-        </section>
+        </div>
     </main>
 
-    <footer class="bg-white py-6 px-4 md:px-8 lg:px-16 mt-12">
-        <div class="max-w-7xl mx-auto text-center text-[#8E8E93]">
-            <p>&copy; 2024 Cloud Game Online. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center text-gray-600">
+                <p>&copy; 2024 CloudGame. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html> 

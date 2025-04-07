@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Survivors - CloudGame</title>
+    <meta name="description" content="Play Monster Survivors online. A thrilling survival game where you fight against waves of monsters in this exciting cloud-based adventure.">
+    <link rel="canonical" href="https://cloudgame.online/game/monster-survivors" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'apple-gray': '#F5F5F7',
+                        'apple-blue': '#0071E3',
+                        'apple-dark': '#1D1D1F'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-apple-gray min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <h1 class="text-3xl font-bold text-apple-dark">CloudGame</h1>
+                    <p class="text-gray-600 mt-2">Your Ultimate Cloud Gaming Destination</p>
+                </div>
+                <div class="w-full md:w-96">
+                    <div class="relative">
+                        <input type="text" 
+                               placeholder="Search games..." 
+                               class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:border-transparent">
+                        <button class="absolute right-3 top-1/2 transform -translate-y-1/2">
+                            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Game Title and Description -->
+        <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+            <h2 class="text-3xl font-bold text-apple-dark mb-4">Monster Survivors</h2>
+            <p class="text-gray-600 text-lg mb-6">Survive wave after wave of monsters in this thrilling action-packed adventure!</p>
+            
+            <!-- Game Frame -->
+            <div class="aspect-w-16 aspect-h-9 mb-6">
+                <iframe 
+                    src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" 
+                    class="w-full h-full rounded-lg"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Game Description -->
+            <div class="prose max-w-none">
+                <h3 class="text-xl font-semibold mb-4">How to Play</h3>
+                <p class="text-gray-700 mb-4">
+                    Monster Survivors is an exciting survival game where you must defend yourself against endless waves of monsters. 
+                    Use your weapons and special abilities to stay alive as long as possible. Collect power-ups and upgrade your 
+                    character to become stronger and face increasingly challenging waves of enemies.
+                </p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Use WASD or arrow keys to move your character</li>
+                    <li>Click to shoot at monsters</li>
+                    <li>Collect power-ups to enhance your abilities</li>
+                    <li>Survive as long as possible to achieve high scores</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Recommended Games -->
+        <div class="bg-white rounded-lg shadow-sm p-6">
+            <h2 class="text-2xl font-semibold mb-6 text-apple-dark">Recommended Games</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Recommended Game Card -->
+                <a href="#" class="block bg-apple-gray rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="https://via.placeholder.com/400x225" alt="Recommended game thumbnail" class="object-cover w-full h-full">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-medium text-apple-dark">Game Title</h3>
+                    </div>
+                </a>
+                <!-- Repeat recommended game cards as needed -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center text-gray-600">
+                <p>&copy; 2024 CloudGame. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
